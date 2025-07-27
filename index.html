@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Styleora</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: #fdfbf7; color: #3e3e3e; }
+    header {
+      background: linear-gradient(135deg, #5e503f, #3c2f2f);
+      color: #fdfbf7; text-align: center; padding: 60px 20px;
+      animation: slideFadeDown 1s ease-in-out;
+    }
+    header h1 { font-size: 3rem; margin-bottom: 10px; }
+    header p { font-size: 1.1rem; opacity: 0.9; }
+    nav {
+      background-color: #3c2f2f;
+      display: flex; justify-content: center; flex-wrap: wrap; padding: 12px;
+    }
+    nav a {
+      color: #fdfbf7; margin: 10px 20px; text-decoration: none; font-weight: 600; transition: color 0.3s;
+    }
+    nav a:hover { color: #d4a373; }
+    .products {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px; padding: 50px 20px; background-color: #fff8ec;
+      animation: fadeIn 1.2s ease-in;
+    }
+    .product {
+      background: #ffffff; padding: 20px; border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1); text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .product:hover { transform: translateY(-10px); }
+    .product img { width: 100%; border-radius: 10px; }
+    .product h3 { margin: 15px 0 5px; color: #5e503f; }
+    .product p { font-weight: bold; font-size: 1.1rem; color: #7b6e62; }
+    .product button {
+      margin-top: 10px; padding: 10px 20px;
+      background-color: #7b6e62; color: white; border: none;
+      border-radius: 6px; cursor: pointer; font-weight: 600;
+      transition: background 0.3s;
+    }
+    .product button:hover { background-color: #5e503f; }
+    .contact {
+      background: #f5ebe0; padding: 50px 20px; text-align: center;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+    .contact h2 { margin-bottom: 20px; color: #3c2f2f; }
+    .contact form {
+      max-width: 500px; margin: auto;
+    }
+    .contact input, .contact textarea {
+      width: 100%; padding: 12px; margin: 10px 0;
+      border-radius: 8px; border: 1px solid #d4a373; outline: none;
+    }
+    .contact button {
+      background: #5e503f; color: #fff; padding: 12px 25px;
+      border: none; border-radius: 8px; cursor: pointer;
+      transition: background 0.3s;
+    }
+    .contact button:hover { background: #7b6e62; }
+    footer {
+      background: #3c2f2f; color: #fff; text-align: center; padding: 20px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideFadeDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      nav { flex-direction: column; }
+      nav a { margin: 8px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Styleora</h1>
+    <p>Style that Speaks. Wear it Bold.</p>
+  </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#products">Shop</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <section id="products" class="products">
+    <!-- Add as many products as you like below using the same structure -->
+    <div class="product">
+      <img src="https://via.placeholder.com/270x350?text=Classic+Kurti" alt="Classic Kurti">
+      <h3>Classic Kurti</h3>
+      <p>৳850</p>
+      <button onclick="orderNow('Classic Kurti')">Order Now</button>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/270x350?text=Denim+Jeans" alt="Denim Jeans">
+      <h3>Denim Jeans</h3>
+      <p>৳1250</p>
+      <button onclick="orderNow('Denim Jeans')">Order Now</button>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/270x350?text=Floral+Frock" alt="Floral Frock">
+      <h3>Floral Frock</h3>
+      <p>৳990</p>
+      <button onclick="orderNow('Floral Frock')">Order Now</button>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/270x350?text=Winter+Hoodie" alt="Winter Hoodie">
+      <h3>Winter Hoodie</h3>
+      <p>৳1450</p>
+      <button onclick="orderNow('Winter Hoodie')">Order Now</button>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/270x350?text=Casual+Tee" alt="Casual Tee">
+      <h3>Casual Tee</h3>
+      <p>৳490</p>
+      <button onclick="orderNow('Casual Tee')">Order Now</button>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/270x350?text=Formal+Shirt" alt="Formal Shirt">
+      <h3>Formal Shirt</h3>
+      <p>৳799</p>
+      <button onclick="orderNow('Formal Shirt')">Order Now</button>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <h2>Place Your Order</h2>
+    <p>Fill out the form below to confirm your order.</p>
+    <form onsubmit="submitOrder(event)">
+      <input type="text" id="productName" placeholder="Product Name" readonly required />
+      <input type="text" placeholder="Your Name" required />
+      <input type="text" placeholder="Your Phone Number" required />
+      <textarea rows="3" placeholder="Delivery Address" required></textarea>
+      <button type="submit">Submit Order</button>
+    </form>
+  </section>
+  <footer>
+    <p>&copy; 2025 Styleora | Powered by your style</p>
+  </footer>
+  <script>
+    function orderNow(product) {
+      document.getElementById('productName').value = product;
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    }
+    function submitOrder(event) {
+      event.preventDefault();
+      alert("✅ Thank you! Your order for '" + document.getElementById('productName').value + "' has been received.");
+      event.target.reset();
+    }
+  </script>
+</body>
+</html>
